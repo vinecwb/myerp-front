@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../../api/api'; 
+import api from '../../api/api';
 import './Register.css';
 
 const Register = () => {
@@ -12,30 +12,35 @@ const Register = () => {
     phone: '',
     cpf: '',
   });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); 
+
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const navigate = useNavigate();
-
   const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      try {
-        await api.post('/auth/register', formData); 
-        alert('Usuário registrado com sucesso!');
-        navigate('/login'); 
-      } catch (error) {
-        alert('Erro ao registrar usuário.');
-        console.error(error);
-      }
-    };
+    e.preventDefault();
+    setLoading(true);
 
-  
+    try {
+      await api.post('users', formData); 
+      alert('Usuário registrado com sucesso!');
+      navigate('/login'); 
+    } catch (error: any) {
+      setError('Erro ao registrar usuário. Tente novamente.');
+      console.error(error.response?.data || error); 
+    } finally {
+      setLoading(false); 
+    }
+  };
 
   return (
     <div className="register-container">
       <h1>Registro de Usuário</h1>
+      {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome</label>
@@ -109,7 +114,9 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit">Cadastrar</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Cadastrando...' : 'Cadastrar'}
+        </button>
       </form>
     </div>
   );

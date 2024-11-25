@@ -25,7 +25,6 @@ const Login = () => {
         throw new Error('Falha ao fazer login');
       }
 
-      const data = await response.json();
 
 
       window.location.href = "/dashboard"; 

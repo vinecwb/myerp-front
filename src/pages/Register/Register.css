@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  text-shadow: #000 1px 1px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.register-container {
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.085);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.register-container h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; 
+  margin-bottom: 0.5px;
+}
+
+.register-container label {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.register-container input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.register-container input::placeholder {
+  color: #fff;
+}
+
+.register-container button {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.register-container button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.register-container .alert {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  display: none;
+  font-size: 14px;
+}
+
+.register-container .alert.success {
+  background-color: rgba(0, 255, 0, 0.2);
+  color: #fff;
+}
+
+.register-container .alert.error {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #fff;
+}

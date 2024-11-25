@@ -8,9 +8,6 @@ const Login = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    
-    console.log('Email:', email);
-    console.log('Senha:', password);
 
     try {
       const response = await fetch('http://localhost:3000/auth/login', {

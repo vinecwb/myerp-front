@@ -103,3 +103,22 @@ body {
   background-color: rgba(255, 0, 0, 0.2);
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .register-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .register-container h1 {
+    font-size: 24px;
+  }
+
+  .register-container input {
+    font-size: 14px;
+  }
+
+  .register-container button {
+    font-size: 14px;
+  }
+}

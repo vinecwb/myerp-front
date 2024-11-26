@@ -28,17 +28,17 @@ const Home: React.FC = () => {
         <h2>Por que escolher nosso sistema?</h2>
         <div className="features-grid">
           <div className="feature">
-            <img src="/assets/icon1.png" alt="Icone 1" />
+            <img src="/assets/taxa.png" alt="Icone 1" />
             <h3>Fácil de usar</h3>
-            <p>Nossa interface é intuitiva e acessível para todos.</p>
+            <p>Gere notas fiscais para os seus pedidos.</p>
           </div>
           <div className="feature">
-            <img src="/assets/icon2.png" alt="Icone 2" />
+            <img src="/assets/cadastro.png" alt="Icone 2" />
             <h3>Automatização</h3>
             <p>Automatize tarefas e economize tempo no dia a dia.</p>
           </div>
           <div className="feature">
-            <img src="/assets/icon3.png" alt="Icone 3" />
+            <img src="/assets/suporte.png" alt="Icone 3" />
             <h3>Suporte dedicado</h3>
             <p>
               Nossa equipe está pronta para ajudar sempre que você precisar.

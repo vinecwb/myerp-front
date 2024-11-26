@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             <Link to="/login" className="button-link">Login</Link>
           </li>
           <li>
-            <Link to="/" className="button-link primary">Experimente grátis</Link>
+            <Link to="/register" className="button-link primary">Registre-se</Link>
           </li>
         </ul>
       </nav>

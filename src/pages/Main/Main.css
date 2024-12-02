@@ -1,0 +1,72 @@
+/* Main.css */
+
+body {
+  margin: 0; /* Remove margem padrão */
+  font-family: Arial, sans-serif;
+  background-color: #282c34; /* Fundo padrão */
+  color: #fff;
+  height: 100vh; /* Garante altura de 100% da viewport */
+}
+
+.dashboard-container {
+  margin-top: 210px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide a largura em 2 colunas iguais */
+  grid-template-rows: 1fr 1fr; /* Divide a altura em 2 linhas iguais */
+  height: 100vh; /* Ocupa 100% da altura da tela */
+  width: 100vw; /* Ocupa 100% da largura da tela */
+}
+
+/* Estilo para os quadrantes */
+.dashboard-top-left, 
+.dashboard-top-right, 
+.dashboard-bottom-left, 
+.dashboard-bottom-right {
+  display: flex;
+  justify-content: center; /* Centraliza conteúdo horizontalmente */
+  align-items: center; /* Centraliza conteúdo verticalmente */
+  background-color: #1f1f1f; /* Cor de fundo consistente com o login */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
+  padding: 20px;
+  color: #fff; /* Cor do texto */
+}
+
+/* Botões no quadrante superior esquerdo */
+.dashboard-top-left {
+  flex-direction: column; /* Botões empilhados */
+  align-items: flex-start; /* Alinha botões à esquerda */
+  padding: 20px;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.dashboard-top-left .btn {
+  padding: 20px;
+  background-color: #007bff; /* Cor padrão do botão */
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100px; /* Largura fixa para botões quadrados */
+  height: 100px; /* Altura fixa para botões quadrados */
+  text-align: center;
+  border-radius: 0; /* Remove bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para os botões */
+}
+
+.dashboard-top-left .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Adicionando cores específicas para diferenciar os quadrantes */
+.dashboard-top-right {
+  background-color: #25292e;
+}
+
+.dashboard-bottom-left {
+  background-color: #343a40;
+}
+
+.dashboard-bottom-right {
+  background-color: #404552;
+}

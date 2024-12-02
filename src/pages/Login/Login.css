@@ -1,11 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da viewport */
+  margin: 0; /* Remove a margem padrão */
+  background: #282c34; /* Adicione uma cor de fundo para contraste */
+}
+
 .container {
   width: 450px;
   background-color: rgba(255, 255, 255, 0.085);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 40px;
+  padding: 80px;
   border-radius: 10px;
-  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreamento */
+  margin-top: 180px;
 }
 
 .container h1{

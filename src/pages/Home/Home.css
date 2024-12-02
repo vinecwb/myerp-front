@@ -1,176 +1,257 @@
 .home-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: url("/assets/background.jpg") no-repeat center center/cover;
-    color: #fff;
-  }
-  
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    align-items: center;
-    padding: 40px 20px; 
-    background-color: rgba(255, 255, 255, 0.085); 
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin: 40px auto;
-    margin-top: 200px;
-    width: 80%;
-    max-width: 1200px;
-    gap: 20px;
-  }
-  
-  .hero-image img {
-    width: 80%; 
-    height: auto;
-    margin-top: 20px;
-    border-radius: 30px; 
-    align-self: center; 
-  }
-  
-  .hero-content {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px; 
-    max-width: 500px;
-    text-align: left;
-  }
-  
-  .hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-
-  .cta-container {
-    display: flex;
-    justify-content: center;
-    gap: 35px; 
-    align-items: center 
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("/assets/background.jpg") no-repeat center center/cover;
+  color: #fff;
+  padding-top: 60px; /* Adicionando um pouco de espaçamento superior */
 }
-  
-  .cta-button {
-    padding: 13px 10px;
-    background-color: #fff;
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-shadow: none;
-  }
-  
-  .cta-button:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
 
-  .cta-link {
-    margin: 20px 0 20px 0; 
-    color: #fff;
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.085);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 40px auto;
+  margin-top: 850px; /* Diminua ou ajuste conforme necessário */
+  width: 80%;
+  max-width: 1200px;
+  gap: 20px;
+  position: relative;
+}
+
+
+
+.hero-image img {
+  width: 80%; 
+  height: auto;
+  margin-top: 20px;
+  border-radius: 30px; 
+  align-self: center; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px; 
+  max-width: 500px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px; 
+  align-items: center 
+}
+
+.cta-button {
+  padding: 13px 10px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: none;
+}
+
+.cta-button:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.cta-link {
+  margin: 20px 0 20px 0; 
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-plans:hover {
+  text-decoration: underline;
+}
+
+.features {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.085);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0; 
+  border-radius: 10px;
+  width: 100%; 
+  max-width: none; 
+  box-sizing: border-box;
+}
+
+.features h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.15); 
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+.about {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos em coluna */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centraliza o conteúdo de texto */
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo mais claro */
+  backdrop-filter: blur(10px); /* Desfoque no fundo */
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Borda suave */
+}
+
+.about-left {
+  display: flex;
+  max-width: 100%; /* Limita a largura da lista */
+  margin: 20px 0; /* Espaçamento da lista */
+  justify-content: center;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o título */
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o parágrafo */
+}
+
+.about ul {
+  list-style: none;
+  padding: 20px 0 0 200px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.about ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.about ul li::before {
+  margin-right: 10px;
+}
+
+.about-right {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem */
+  align-items: center;
+  padding: 20px 280px 0 0;
+}
+
+.about-image {
+  width: 250px; /* Tamanho médio da imagem */
+  height: 250px; /* Garantindo que a altura seja igual à largura */
+  object-fit: cover; /* Garante que a imagem não distorça */
+  border-radius: 50%; /* Arredonda completamente */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
     font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
   }
-  
-  .link-plans:hover {
-    text-decoration: underline;
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
   }
-  
-  .features {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.085);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    margin: 20px 0; 
-    border-radius: 10px;
-    width: 100%; 
-    max-width: none; 
-    box-sizing: border-box;
-  }
-  
+
   .features h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: #fff;
+    font-size: 24px;
   }
-  
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .feature {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.15); 
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .feature img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
-  
+
   .feature h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 18px;
   }
-  
+
   .feature p {
-    font-size: 16px;
-    color: #fff;
+    font-size: 14px;
   }
-  
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 28px;
-    }
-  
-    .hero p {
-      font-size: 16px;
-    }
-  
-    .cta-button {
-      font-size: 14px;
-      padding: 10px 20px;
-    }
-  
-    .features h2 {
-      font-size: 24px;
-    }
-  
-    .feature h3 {
-      font-size: 18px;
-    }
-  
-    .feature p {
-      font-size: 14px;
-    }
-  }
-  
+}
